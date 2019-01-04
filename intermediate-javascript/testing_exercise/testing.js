@@ -34,3 +34,19 @@ function acceptNumbersOnly(...args) {
 
   return isNum;
 }
+
+function mergeArrays(arr1, arr2) {
+  let mergedArray = [];
+
+  arr1.forEach(function (i) {
+    mergedArray.push(i);
+  });
+
+  arr2.forEach(function (i) {
+    mergedArray.push(i);
+  });
+
+  return mergedArray.sort(function (a, b) {
+    return a - b;
+  });
+}

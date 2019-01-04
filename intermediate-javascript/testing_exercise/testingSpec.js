@@ -60,3 +60,9 @@ describe('Accept Numbers Only', function () {
     }, 45).should.equal(false);
   });
 });
+
+describe('Merge Arrays', function () {
+  it('Returns one merged sorted array', function () {
+    mergeArrays([2, 5, 2, 4], [1, 6, 4, 3]).should.deep.equal([1, 2, 2, 3, 4, 4, 5, 6]);
+  });
+});
