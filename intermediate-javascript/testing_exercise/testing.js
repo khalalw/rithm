@@ -6,9 +6,21 @@ function replaceWith(str, char, replacement) {
 
   let charIndex = str.indexOf(char);
 
-  if (charIndex >= 0) {
-    return str.replaceAt(charIndex, replacement);
-  } else {
-    return false;
+  return charIndex >= 0 ? str.replaceAt(charIndex, replacement) : false;
+}
+
+function expand(arr, num) {
+  if (arr.length === 0 || num < 0) {
+    return 'Array is empty or copy number is negative.';
   }
+
+  let expandArr = [];
+  while (num > 0) {
+    arr.forEach(function (i) {
+      expandArr.push(i);
+    });
+    num -= 1;
+  }
+
+  return expandArr;
 }
