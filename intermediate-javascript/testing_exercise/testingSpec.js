@@ -36,4 +36,27 @@ describe('Expand', function () {
   it('Display a message for an empty array', function () {
     expand([], 5).should.equal('Array is empty or copy number is negative.');
   });
-})
+});
+
+describe('Accept Numbers Only', function () {
+  it('Returns true for all numbers', function () {
+    acceptNumbersOnly(3, 2, 4, 4, 2).should.equal(true);
+  });
+  it('Returns false for strings', function () {
+    acceptNumbersOnly(3, 2, 4, 'hello', 4, 2).should.equal(false);
+  });
+  it('Returns false for booleans', function () {
+    acceptNumbersOnly(3, 2, 4, false, 4, 2).should.equal(false);
+  });
+  it('Returns false for Nan', function () {
+    acceptNumbersOnly(3, 2, 4, NaN, 4, 2).should.equal(false);
+  });
+  it('Returns false for arrays', function () {
+    acceptNumbersOnly(3, 2, 4, [], 4, 2).should.equal(false);
+  });
+  it('Returns false for objects', function () {
+    acceptNumbersOnly(93, 2, 3, {
+      hello: 'hello'
+    }, 45).should.equal(false);
+  });
+});

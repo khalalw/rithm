@@ -5,7 +5,6 @@ function replaceWith(str, char, replacement) {
   };
 
   let charIndex = str.indexOf(char);
-
   return charIndex >= 0 ? str.replaceAt(charIndex, replacement) : false;
 }
 
@@ -23,4 +22,15 @@ function expand(arr, num) {
   }
 
   return expandArr;
+}
+
+function acceptNumbersOnly(...args) {
+  let isNum = true;
+  args.forEach(function (i) {
+    if (isNaN(i) || typeof i !== 'number') {
+      isNum = false;
+    }
+  });
+
+  return isNum;
 }
