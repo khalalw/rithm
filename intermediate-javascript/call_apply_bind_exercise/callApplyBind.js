@@ -25,5 +25,20 @@ function invokeMax(func, counter) {
 
     return func.apply(null, arguments);
   };
+}
 
+function guessingGame(amount) {
+  let answer = Math.ceil(Math.random() * 10);
+  let count = 0;
+
+  return function (guess) {
+    count++;
+    if (count === amount && guess !== answer) {
+      return `No more guesses! The answer was ${answer}`;
+    } else if (count > amount) {
+      return 'You are all done playing';
+    }
+
+    return guess === answer ? 'You got it!' : guess > answer ? 'Too high' : 'Too low';
+  };
 }
