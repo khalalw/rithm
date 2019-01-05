@@ -39,5 +39,12 @@ Array.prototype.map = function (func, index, array) {
 };
 
 String.prototype.reverse = function () {
-  return this.split('').reverse().join('');
+  // return this.split('').reverse().join('');
+
+  let reverseStr = '';
+  for (let i = this.length - 1; i >= 0; i--) {
+    reverseStr += this[i];
+  }
+
+  return reverseStr;
 };
