@@ -13,3 +13,17 @@ function sumEvenArguments() {
   });
   return sum;
 }
+
+function invokeMax(func, counter) {
+  let num = 0;
+
+  return function () {
+    if (num >= counter) {
+      return 'Maxed Out!';
+    }
+    num++;
+
+    return func.apply(null, arguments);
+  };
+
+}
