@@ -37,3 +37,7 @@ Array.prototype.map = function (func, index, array) {
 
   return arr;
 };
+
+String.prototype.reverse = function () {
+  return this.split('').reverse().join('');
+};
