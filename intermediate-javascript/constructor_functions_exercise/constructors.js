@@ -3,8 +3,9 @@ function Person(firstName, lastName, favoriteColor, favoriteNumber) {
   this.lastName = lastName;
   this.favoriteColor = favoriteColor;
   this.favoriteNumber = favoriteNumber;
-}
+  this.multiplyFavoriteNumber = multiplyFavoriteNumber;
 
-function multiplyFavoriteNumber(obj) {
-  return obj.favoriteNumber * 10;
+  function multiplyFavoriteNumber(num) {
+    return this.favoriteNumber * num;
+  }
 }
