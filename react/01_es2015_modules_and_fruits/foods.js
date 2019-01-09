@@ -1,4 +1,4 @@
-export const fruits = [
+export let fruit = [
   "🍇",
   "🍈",
   "🍉",
