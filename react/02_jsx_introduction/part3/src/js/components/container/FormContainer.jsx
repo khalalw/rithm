@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 class Person extends React.Component {
   render() {
     let age = this.props.age;
@@ -44,4 +46,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<App />, document.querySelector('#create-article-form'));
