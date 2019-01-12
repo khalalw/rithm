@@ -10,10 +10,12 @@ const style = {
     flexBasis: "26%",
     marginBottom: "20px",
     marginLeft: "10px",
-    marginRight: "20px",
+    marginRight: "10px",
+    display: "inline-block",
   },
-  inline: {
-    display: "inlineBlock",
+  flex: {
+    flexBasis: "26%",
+    textAlign: "center",
   },
   h2: {
     color: "blue",
@@ -23,16 +25,16 @@ const style = {
 export default class Pokemon extends Component {
   render() {
     return (
-      <div style={style.card} className="pokemon">
-        <li style={style.inline}>
-          <h2 style={style.h2}>{this.props.name}</h2>
+      <li style={style.flex}>
+        <div style={style.card} className="pokemon">
+          <h3 style={style.h2}>{this.props.name}</h3>
           <img src={this.props.image} />
           <p>
             <strong>Type: </strong>
             {this.props.type}
           </p>
-        </li>
-      </div>
+        </div>
+      </li>
     );
   }
 }
