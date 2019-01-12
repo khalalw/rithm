@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-const cardStyle = {
+const style = {
   card: {
     backgroundColor: "lightGrey",
     width: "200px",
@@ -10,17 +10,20 @@ const cardStyle = {
     paddingTop: "12px",
     paddingBottom: "15px",
   },
-  list: {
-    listStyle: "none",
+  flex: {
+    flexBasis: "26%",
+  },
+  h2: {
+    color: "blue",
   },
 };
 
 export default class Pokemon extends Component {
   render() {
     return (
-      <li>
-        <div style={cardStyle.card} className="pokemon">
-          <h2>{this.props.name}</h2>
+      <li style={style.flex}>
+        <div style={style.card} className="pokemon">
+          <h2 style={style.h2}>{this.props.name}</h2>
           <img src={this.props.image} />
           <p>
             <strong>Type: </strong>

@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import Pokemon from "../presentational/Pokemon";
 import { render } from "react-dom";
 
-const listStyle = {
-  listStyle: "none",
+const appStyle = {
+  list: {
+    listStyle: "none",
+    display: "flex",
+    // flexDirection: "row",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+  },
+  h1: {
+    textAlign: "center",
+  },
 };
 
 export default class App extends Component {
@@ -19,9 +28,11 @@ export default class App extends Component {
       );
     });
     return (
-      <div>
-        <h1>Pokedex</h1>
-        <ul style={listStyle}>{pokeList}</ul>
+      <div id>
+        <h1 style={appStyle.h1}>Pokedex</h1>
+        <div id="list-cont">
+          <ul style={appStyle.list}>{pokeList}</ul>
+        </div>
         {console.log(pokeList)}
       </div>
     );
