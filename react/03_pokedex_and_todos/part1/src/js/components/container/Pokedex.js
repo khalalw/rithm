@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import PokemonItem from "../presentational/PokemonItem";
+import Pokemon from "../presentational/Pokemon";
 import { render } from "react-dom";
 
 export default class App extends Component {
   render() {
     var pokeList = this.props.pokemon.map(poke => {
       return (
-        <PokemonItem
+        <Pokemon
           key={poke.id}
           name={poke.name}
           image={poke.image}

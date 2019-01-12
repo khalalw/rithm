@@ -1,1 +1,1 @@
-import App from "./js/components/container/App";
+import Pokedex from "./js/components/container/Pokedex";

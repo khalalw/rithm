@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class PokemonItem extends Component {
+export default class Pokemon extends Component {
   render() {
     return (
       <li>
@@ -16,7 +16,7 @@ export default class PokemonItem extends Component {
   }
 }
 
-PokemonItem.propTypes = {
+Pokemon.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
   type: PropTypes.string,
