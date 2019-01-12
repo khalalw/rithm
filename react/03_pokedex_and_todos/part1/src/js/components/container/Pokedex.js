@@ -6,7 +6,6 @@ const appStyle = {
   list: {
     listStyle: "none",
     display: "flex",
-    // flexDirection: "row",
     flexFlow: "row wrap",
     justifyContent: "center",
     alignItems: "center",
