@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const style = {
   card: {
     backgroundColor: "lightGrey",
-    width: "200px",
+    width: "175px",
     textAlign: "center",
     borderRadius: "25px",
     paddingTop: "12px",

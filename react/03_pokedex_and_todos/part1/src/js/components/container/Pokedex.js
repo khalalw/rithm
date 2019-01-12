@@ -9,6 +9,7 @@ const appStyle = {
     // flexDirection: "row",
     flexFlow: "row wrap",
     justifyContent: "center",
+    alignItems: "center",
   },
   h1: {
     textAlign: "center",
