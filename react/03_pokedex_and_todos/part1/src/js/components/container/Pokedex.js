@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Pokemon from "../presentational/Pokemon";
 import { render } from "react-dom";
 
+const listStyle = {
+  listStyle: "none",
+};
+
 export default class App extends Component {
   render() {
     var pokeList = this.props.pokemon.map(poke => {
@@ -17,7 +21,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>Pokedex</h1>
-        <ul>{pokeList}</ul>
+        <ul style={listStyle}>{pokeList}</ul>
         {console.log(pokeList)}
       </div>
     );
