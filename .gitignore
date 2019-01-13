@@ -1,4 +1,7 @@
-.DS_Store
-.DS_Store
-.DS_Store
 node_modules/
+examples/node_exercises/.DS_Store
+.DS_Store
+examples/.DS_Store
+examples/react_examples/.DS_Store
+.DS_Store
+.gitignore
