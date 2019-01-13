@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "plugins": ["react"],
+  "rules": {
+    "strict": 2,
+    "quotes": 2,
+    "camelcase": 2,
+    "no-underscore-dangle": 2,
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }]
+  }
+}
