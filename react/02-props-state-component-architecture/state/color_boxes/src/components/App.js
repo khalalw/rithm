@@ -1,28 +1,29 @@
 import React, { Component } from "react";
-import Square from "./Square";
 import "./App.css";
-
+import Square from "./Square";
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colors: ["red", "orange", "yellow", "blue", "indigo", "violet"],
+      colors: ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
     };
   }
 
-  render() {
+  createSquares() {
     let squares = [];
-    for (let i = 0; i <= 24; i++) {
+    for (let i = 1; i <= 6; i++) {
+      let randomIndex = Math.floor(Math.random() * this.state.colors.length);
       let bgcolor = {
-        backgroundColor: this.state.colors[
-          Math.floor(Math.random() * this.state.colors.length)
-        ],
+        backgroundColor: this.state.colors[randomIndex],
       };
 
       squares.push(<Square key={i} style={bgcolor} />);
     }
-    console.log(squares);
+    return squares;
+  }
 
-    return <div id="square-cont">{squares}</div>;
+  render() {
+    console.log(this.createSquares());
+    return <div id="square-cont">{this.createSquares()}</div>;
   }
 }
