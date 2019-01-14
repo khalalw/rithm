@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import Square from "./squares/Square";
+import Square1 from "./squares/Square1";
 export default class App extends Component {
   render() {
     return (
       <div id="square-cont">
-        <Square />;
+        <Square1 />;
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Square extends Component {
+export default class Square1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,11 +8,7 @@ export default class Square extends Component {
     };
   }
 
-  logIt = () => {
-    // console.log(this.props.style.backgroundColor);
-    // console.log(this);
-
-    // const newColors = [...this.state.colors];
+  changeColor = () => {
     let newColors = this.state.colors.slice();
     let lastColor = newColors.pop();
     newColors.unshift(lastColor);
@@ -29,7 +25,7 @@ export default class Square extends Component {
         style={{
           backgroundColor: this.state.colors[0],
         }}
-        onClick={this.logIt}
+        onClick={this.changeColor}
       />
     );
   }
