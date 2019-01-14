@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Square from "./Square";
+import "./App.css";
 
 export default class App extends Component {
   constructor(props) {
@@ -9,18 +10,19 @@ export default class App extends Component {
     };
   }
 
-  createSquares() {
-    let squares = [];
-    for (let i = 1; i <= 24; i++) {
-      let color = {
-        backgroundColor: this.state.colors[Math.floor(Math.random() * 7)],
-      };
-      squares.push(<Square style={color} />);
-    }
-    return squares;
-  }
-
   render() {
-    return <div>{this.createSquares()}</div>;
+    let squares = [];
+    for (let i = 0; i <= 24; i++) {
+      let bgcolor = {
+        backgroundColor: this.state.colors[
+          Math.floor(Math.random() * this.state.colors.length)
+        ],
+      };
+
+      squares.push(<Square key={i} style={bgcolor} />);
+    }
+    console.log(squares);
+
+    return <div id="square-cont">{squares}</div>;
   }
 }
