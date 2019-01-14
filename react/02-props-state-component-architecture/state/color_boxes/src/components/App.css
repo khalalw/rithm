@@ -3,6 +3,11 @@
 }
 
 .square {
-  width: 240px;
-  height: 240px;
+  width: 175px;
+  height: 175px;
+}
+
+#square-cont {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
 }

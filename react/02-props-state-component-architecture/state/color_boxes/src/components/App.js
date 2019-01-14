@@ -11,7 +11,7 @@ export default class App extends Component {
 
   createSquares() {
     let squares = [];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 24; i++) {
       let randomIndex = Math.floor(Math.random() * this.state.colors.length);
       let bgcolor = {
         backgroundColor: this.state.colors[randomIndex],
@@ -23,7 +23,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.createSquares());
     return <div id="square-cont">{this.createSquares()}</div>;
   }
 }
