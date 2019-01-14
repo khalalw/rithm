@@ -4,7 +4,7 @@ export default class Square extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colors: ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
+      colors: ["blue", "green", "yellow", "indigo", "violet", "orange", "red"],
     };
   }
 
