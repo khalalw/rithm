@@ -1,14 +1,24 @@
-## React Exercises
+# React Fundamentals Exercises
 
-1.  [ES2015 Modules - Fruits](./01_es2015_modules_and_fruits)
-1.  [JSX Introduction](./02_jsx_introduction)
-1.  [Props - Pokedex and Todos](./03_pokedex_and_todos)
-1.  [State - Color Boxes and Coin Flip](./04_color_boxes_and_coin_flip)
-1.  [Events and Forms - Custom Link, Div Maker, and Todos](./05_custom_link_div_maker_and_todos)
-1.  [Lifecycle Methods - Deck of Cards and CheeZJokes](./06_deck_of_cards_CheeZJokes)
-1.  [React Router Vending Machine](./07_react_router_vending_machine)
-1.  [React Router Calculator](./08_react_router_calculator)
-1.  [React Router Dog Finder](./09_react_router_dog_finder)
-1.  [React Router Color Factory](./10_react_router_color_factory)
-1.  [Redux Mood App](./11_redux_mood_app)
-1.  [Microblog](./12_microblog)
+![Rithm School](./rithm-school-company-logo.png)
+
+This repository contains the exercises for Rithm School's free [React Fundamentals](https://www.rithmschool.com/courses/react-fundamentals) course.  React is a more advanced topic, so if you are new to JavaScript, we would suggest starting with our free JavaScript courses which are also available on [Rithm School](https://www.rithmschool.com/courses).
+
+## React Fundamentals
+
+#### Introduction To React
+  * [JSX and Babel](./01-introduction-to-react/jsx-and-babel/readme.md)
+  * [Webpack](./01-introduction-to-react/webpack/readme.md)
+ 
+#### Props, State, and Component Architecture
+  * [Props](./02-props-state-component-architecture/props/readme.md)
+  * [State](./02-props-state-component-architecture/state/readme.md)
+  * [React Components](./02-props-state-component-architecture/react-components/readme.md)
+
+#### Events, Forms, Refs, and Life Cycle
+  * [Events](./03-events-forms-refs-life-cycle/events/readme.md)
+  * [Forms And Refs](./03-events-forms-refs-life-cycle/forms-and-refs/readme.md)
+  * [Life Cycle Methods](./03-events-forms-refs-life-cycle/life-cycle/readme.md)
+
+#### Final Project
+  * [Final Project](./04-final-project/readme.md)
