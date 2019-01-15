@@ -13,18 +13,30 @@ export default class Square extends Component {
     let lastColor = newColors.pop();
     newColors.unshift(lastColor);
 
-    this.setState({
-      colors: newColors,
-    });
+    this.setState(
+      (prev, props) => {
+        return { colors: newColors };
+      },
+      () => {
+        console.log(this.state.colors);
+      }
+    );
   };
 
   randomColor = () => {
     let random = Math.ceil(Math.random() * 6);
     let newColors = this.state.colors.slice();
 
-    this.setState({
-      colors: newColors.slice(random).concat(newColors.slice(0, random)),
-    });
+    this.setState(
+      (prev, props) => {
+        return {
+          colors: newColors.slice(random).concat(newColors.slice(0, random)),
+        };
+      },
+      () => {
+        console.log(this.state.colors);
+      }
+    );
   };
 
   render() {
