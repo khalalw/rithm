@@ -30,7 +30,7 @@ export default class Square extends Component {
       <div
         className="square"
         style={{ backgroundColor: this.state.colors[0] }}
-        onClick={this.changeColor}
+        onClick={this.randomColor}
       />
     );
   }
