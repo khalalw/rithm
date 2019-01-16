@@ -5,16 +5,20 @@ class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: ["go to the store", "go to the park", "pick up children"],
+      todos: ["go to the store", "go to work"],
     };
   }
 
   render() {
-    const listItems = this.state.todos.map(item => {
-      return <Todo item={item} />;
+    const listItems = this.state.todos.map((item, index) => {
+      return <Todo key={index} item={item} />;
     });
 
-    return <ul>{listItems}</ul>;
+    return (
+      <span>
+        <ul>{listItems}</ul>
+      </span>
+    );
   }
 }
 
