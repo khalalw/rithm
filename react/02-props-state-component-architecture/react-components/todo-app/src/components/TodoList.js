@@ -10,7 +10,23 @@ class TodoList extends Component {
         "need to grab groceries for the children",
         "2PM appt at Gaia Nails",
       ],
+      textColor: ["black", "black"],
     };
+  }
+
+  toggleComplete(index) {
+    let colorArr = this.state.textColor.slice();
+    let [color] = colorArr.splice(index, 1);
+
+    if (color === "black") {
+      color = "red";
+    } else if (color === "red") {
+      color = "black";
+    }
+
+    colorArr.splice(index, 0, color);
+
+    this.setState({ textColor: colorArr });
   }
 
   handleRemove(index) {
@@ -30,6 +46,8 @@ class TodoList extends Component {
           item={item}
           removeItem={this.handleRemove.bind(this, index)}
           title={this.state.description[index]}
+          complete={this.toggleComplete.bind(this, index)}
+          style={{ color: this.state.textColor[index] }}
         />
       );
     });

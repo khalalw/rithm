@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Todo = props => (
-  <div>
+  <div style={props.style}>
     <h4>{props.item}</h4>
     <li>{props.title}</li>
     <button onClick={props.complete}>Complete</button>
