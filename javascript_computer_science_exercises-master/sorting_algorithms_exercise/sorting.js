@@ -77,3 +77,22 @@ function merge(left, right) {
   }
   return result.concat(left.length ? left : right);
 }
+
+// Quick Sort
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // use first number as pivot
+  let [pivot, ...rest] = arr;
+  let left = [];
+  let right = [];
+
+  // compare each value of array and assign to left/right
+  rest.forEach(element =>
+    element < pivot ? left.push(element) : right.push(element)
+  );
+
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
