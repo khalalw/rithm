@@ -38,3 +38,17 @@ function selectionSort(arr) {
   }
   return arr;
 }
+
+// Insertion sort
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let temp = arr[i];
+
+    for (let j = i - 1; j >= 0 && arr[i] < arr[j]; j--, i--) {
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  }
+
+  return arr;
+}
