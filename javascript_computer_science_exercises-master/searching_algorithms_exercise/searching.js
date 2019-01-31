@@ -25,6 +25,18 @@ function binarySearch(array, value) {
       right = middle - 1;
     }
   }
-
   return -1;
+}
+
+// Linear search, recursively
+function linearSearchRecursive(array, value, index) {
+  if (index >= array.length) {
+    return -1;
+  }
+
+  if (array[index] === value) {
+    return index;
+  }
+
+  return linearSearchRecursive(array, value, index + 1);
 }
