@@ -9,6 +9,19 @@ function linearSearch(array, value) {
   return index;
 }
 
+// Linear search, recursively
+function linearSearchRecursive(array, value, index) {
+  if (index >= array.length) {
+    return -1;
+  }
+
+  if (array[index] === value) {
+    return index;
+  }
+
+  return linearSearchRecursive(array, value, index + 1);
+}
+
 // Binary Search
 function binarySearch(array, value) {
   let left = 0;
@@ -28,15 +41,24 @@ function binarySearch(array, value) {
   return -1;
 }
 
-// Linear search, recursively
-function linearSearchRecursive(array, value, index) {
-  if (index >= array.length) {
+// Binary search, recursively
+function binarySearchRecursive(
+  array,
+  value,
+  left = 0,
+  right = array.length - 1
+) {
+  if (right >= left) {
+    let middle = Math.floor((left + right) / 2);
+
+    if (array[middle] === value) {
+      return middle;
+    } else if (array[middle] > value) {
+      return binarySearchRecursive(array, value, left, middle - 1);
+    } else {
+      return binarySearchRecursive(array, value, middle + 1, right);
+    }
+  } else {
     return -1;
   }
-
-  if (array[index] === value) {
-    return index;
-  }
-
-  return linearSearchRecursive(array, value, index + 1);
 }
