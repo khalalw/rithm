@@ -51,7 +51,8 @@ SinglyLinkedList.prototype.pop = function() {
 
   // delete last element and set previous to the tail
   delete prev.next;
-  prev = this.tail;
+  this.tail = prev;
+  prev.next = null;
   this.length--;
 
   return current.val;
