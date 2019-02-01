@@ -70,7 +70,22 @@ SinglyLinkedList.prototype.unshift = function(element) {
 };
 
 // shift
-// This function should remove a node at the beginning of the SinglyLinkedList. It should return the node removed.
+// This function should remove a node at the beginning of the SinglyLinkedList.
+// It should return the node removed.
+SinglyLinkedList.prototype.shift = function() {
+  if (!this.length) return undefined;
+
+  let current = this.head;
+  this.head = current.next;
+  this.length--;
+
+  // If list is empty after shift, set tail to null
+  if (!this.length) {
+    this.tail = null;
+  }
+
+  return current.val;
+};
 
 // set
 // This function should update the value of a node at a given index of the SinglyLinkedList. It should return true if the node is updated successfully, or false if an invalid index is passed in.
