@@ -99,22 +99,24 @@ SinglyLinkedList.prototype.set = function(index, element) {
   let idx = 0;
   let prev;
 
-  while (idx !== index) {
-    prev = current;
-    current = current.next;
-    idx++;
-  }
-
   if (index === 0) {
     node.next = this.head.next;
     this.head = node;
-  } else if (index === this.length - 1) {
-    this.tail = node;
-    prev.next = node;
   } else {
-    prev.next = node;
-    node.next = current.next;
+    while (idx !== index) {
+      prev = current;
+      current = current.next;
+      idx++;
+    }
+    if (index === this.length - 1) {
+      this.tail = node;
+      prev.next = node;
+    } else {
+      prev.next = node;
+      node.next = current.next;
+    }
   }
+
   return true;
 };
 
