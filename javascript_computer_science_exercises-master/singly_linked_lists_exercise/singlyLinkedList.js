@@ -58,7 +58,16 @@ SinglyLinkedList.prototype.pop = function() {
 };
 
 // unshift
-// This function should add a node to the beginning of the SinglyLinkedList. It should return the list so that the method can be chained.
+// This function should add a node to the beginning of the SinglyLinkedList.
+// It should return the list so that the method can be chained.
+SinglyLinkedList.prototype.unshift = function(element) {
+  let node = new Node(element);
+  node.next = this.head;
+  this.head = node;
+
+  this.length++;
+  return this;
+};
 
 // shift
 // This function should remove a node at the beginning of the SinglyLinkedList. It should return the node removed.
