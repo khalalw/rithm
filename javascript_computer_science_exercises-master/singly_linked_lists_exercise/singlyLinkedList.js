@@ -88,7 +88,35 @@ SinglyLinkedList.prototype.shift = function() {
 };
 
 // set
-// This function should update the value of a node at a given index of the SinglyLinkedList. It should return true if the node is updated successfully, or false if an invalid index is passed in.
+// This function should update the value of a node at a given index of the SinglyLinkedList.
+// It should return true if the node is updated successfully,
+// or false if an invalid index is passed in.
+SinglyLinkedList.prototype.set = function(index, element) {
+  if (index > this.length - 1 || index < 0) return false;
+
+  let node = new Node(element);
+  let current = this.head;
+  let idx = 0;
+  let prev;
+
+  while (idx !== index) {
+    prev = current;
+    current = current.next;
+    idx++;
+  }
+
+  if (index === 0) {
+    node.next = this.head.next;
+    this.head = node;
+  } else if (index === this.length - 1) {
+    this.tail = node;
+    prev.next = node;
+  } else {
+    prev.next = node;
+    node.next = current.next;
+  }
+  return true;
+};
 
 // _get
 // This internal/helper function should find a node at a specified index in a SinglyLinkedList. It should return the found node.
