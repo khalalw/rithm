@@ -27,6 +27,7 @@ SinglyLinkedList.prototype.push = function(element) {
       current = current.next;
     }
     current.next = node;
+    this.tail = node;
   }
   this.length++;
   return this;
@@ -36,7 +37,7 @@ SinglyLinkedList.prototype.push = function(element) {
 // This function should remove a node at the end of the SinglyLinkedList.
 // It should return the node removed.
 SinglyLinkedList.prototype.pop = function() {
-  if (!this.head) return undefined;
+  if (!this.length) return undefined;
 
   // set current value to the head
   let current = this.head;
