@@ -33,7 +33,28 @@ SinglyLinkedList.prototype.push = function(element) {
 };
 
 // pop
-// This function should remove a node at the end of the SinglyLinkedList. It should return the node removed.
+// This function should remove a node at the end of the SinglyLinkedList.
+// It should return the node removed.
+SinglyLinkedList.prototype.pop = function() {
+  if (!this.head) return undefined;
+
+  // set current value to the head
+  let current = this.head;
+  let prev;
+
+  // go down list until last element is reached
+  while (current.next) {
+    prev = current;
+    current = current.next;
+  }
+
+  // delete last element and set previous to the tail
+  delete prev.next;
+  prev = this.tail;
+  this.length--;
+
+  return current.val;
+};
 
 // unshift
 // This function should add a node to the beginning of the SinglyLinkedList. It should return the list so that the method can be chained.
