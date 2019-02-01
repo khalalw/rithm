@@ -91,10 +91,10 @@ SinglyLinkedList.prototype.shift = function() {
 // This function should update the value of a node at a given index of the SinglyLinkedList.
 // It should return true if the node is updated successfully,
 // or false if an invalid index is passed in.
-SinglyLinkedList.prototype.set = function(index, element) {
+SinglyLinkedList.prototype.set = function(index, value) {
   if (index > this.length - 1 || index < 0) return false;
 
-  let node = new Node(element);
+  let node = new Node(value);
   let current = this.head;
   let idx = 0;
   let prev;
