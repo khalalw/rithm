@@ -138,12 +138,13 @@ SinglyLinkedList.prototype.get = function(index) {
 };
 
 // _insert
-// This internal/helper function should insert a node at a specified index in a SinglyLinkedList. It should return the new length of the SinglyLinkedList.
+// This internal/helper function should insert a node at a specified index in a SinglyLinkedList.
+// It should return the new length of the SinglyLinkedList.
 SinglyLinkedList.prototype.insert = function(index, element) {
   let node = new Node(element);
   let idx = 0;
   let current = this.head;
-  let prev = current;
+  let prev;
 
   while (idx < index) {
     prev = current;
@@ -158,7 +159,44 @@ SinglyLinkedList.prototype.insert = function(index, element) {
   return this.length;
 };
 // remove
-// This function should remove a node at a specified index in a SinglyLinkedList. It should return the removed node.
+// This function should remove a node at a specified index in a SinglyLinkedList.
+// It should return the removed node.
+SinglyLinkedList.prototype.remove = function(index) {
+  let idx = 0;
+  let current = this.head;
+  let prev = current;
+
+  while (idx < index) {
+    prev = current;
+    current = current.next;
+    idx++;
+  }
+
+  prev.next = current.next;
+  this.length--;
+
+  return current;
+};
 
 // reverse
-// This function should reverse all of the nodes in a SinglyLinkedList. It should return the reversed SinglyLinkedList.
+// This function should reverse all of the nodes in a SinglyLinkedList.
+// It should return the reversed SinglyLinkedList.
+SinglyLinkedList.prototype.reverse = function() {
+  let current = this.head;
+  let prev;
+  let next;
+
+  while (current) {
+    // define next node
+    next = current.next;
+    // update next node to previous node
+    current.next = prev;
+    // make previous node the current node
+    prev = current;
+    // update current node to the next node
+    current = next;
+  }
+  this.head = prev;
+
+  return this;
+};
