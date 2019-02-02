@@ -123,6 +123,19 @@ SinglyLinkedList.prototype.set = function(index, value) {
 
 // _get
 // This internal/helper function should find a node at a specified index in a SinglyLinkedList. It should return the found node.
+SinglyLinkedList.prototype.get = function(index) {
+  if (index < 0 || index > this.length - 1) {
+    return null;
+  }
+  let idx = 0;
+  let current = this.head;
+
+  while (idx < index) {
+    current = current.next;
+    idx++;
+  }
+  return current.val;
+};
 
 // _insert
 // This internal/helper function should insert a node at a specified index in a SinglyLinkedList. It should return the new length of the SinglyLinkedList.
