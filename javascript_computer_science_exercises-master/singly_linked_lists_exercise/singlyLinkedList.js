@@ -139,7 +139,24 @@ SinglyLinkedList.prototype.get = function(index) {
 
 // _insert
 // This internal/helper function should insert a node at a specified index in a SinglyLinkedList. It should return the new length of the SinglyLinkedList.
+SinglyLinkedList.prototype.insert = function(index, element) {
+  let node = new Node(element);
+  let idx = 0;
+  let current = this.head;
+  let prev = current;
 
+  while (idx < index) {
+    prev = current;
+    current = current.next;
+    idx++;
+  }
+
+  prev.next = node;
+  node.next = current;
+  this.length++;
+
+  return this.length;
+};
 // remove
 // This function should remove a node at a specified index in a SinglyLinkedList. It should return the removed node.
 
